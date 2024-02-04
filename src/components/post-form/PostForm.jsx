@@ -13,14 +13,15 @@ function PostForm({ post }) {
   // setValue (to set value in form)
   //control (to get control of form)
   // getvalues (grab all values of forms)
-  const { register, handleSubmit, watch, setValue, control } = useForm({
-    defaultValues: {
-      title: post?.title || "",
-      slug: post?.$id || "",
-      content: post?.content || "",
-      status: post?.status || "active",
-    },
-  });
+  const { register, handleSubmit, watch, setValue, control, getValues } =
+    useForm({
+      defaultValues: {
+        title: post?.title || "",
+        slug: post?.$id || "",
+        content: post?.content || "",
+        status: post?.status || "active",
+      },
+    });
   const navigate = useNavigate();
   const userData = useSelector((state) => state.auth.userData);
 
@@ -66,14 +67,14 @@ function PostForm({ post }) {
     }
   };
 
-  //this is to generate slug form title
+  // this is to generate slug form title
   const slugTransform = useCallback((value) => {
     if (value && typeof value === "string")
       // this is to convert space to dash
       return value
         .trim()
         .toLowerCase()
-        .replace(/^[a-zA-z\d\s]+/g, "-")
+        .replace(/[^a-zA-z\d\s]+/g, "-")
         .replace(/\s/g, "-");
 
     return "";

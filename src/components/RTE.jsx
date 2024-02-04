@@ -1,7 +1,7 @@
 import React from "react";
 import { Editor } from "@tinymce/tinymce-react";
 // this used to control inputs of external components or custom components
-import { Controller } from "react-hook-from";
+import { Controller } from "react-hook-form";
 
 // this control will pass on the control whoever call this RTE
 export default function RTE({ name, control, label, defaultValue = "" }) {

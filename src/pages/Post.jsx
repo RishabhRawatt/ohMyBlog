@@ -16,7 +16,7 @@ export default function Post() {
 
   // for edit post & delete post check if userid same as post userid
   //then only we show edit and delete buttons
-  const isAuthor = post && userData ? post.userId === userData._id : false;
+  const isAuthor = post && userData ? post.userId === userData.$id : false;
 
   useEffect(() => {
     if (slug) {

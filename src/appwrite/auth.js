@@ -16,7 +16,7 @@ export class AuthService {
     this.client
       .setEndpoint(conf.appwriteUrl)
       .setProject(conf.appwriteprojectId);
-    this.account = new Account(this.account);
+    this.account = new Account(this.client);
   }
 
   // we create function seperate so if in future we want to chnage backend (wrapper)

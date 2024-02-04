@@ -25,12 +25,11 @@ function Login() {
       if (session) {
         // if exist then get current userdata
         const userData = await authService.getCurrentUser();
-        if (userData) {
+        if (userData)
           //put in store (authlogin is store login)
           dispatch(authLogin(userData));
-          //redirect to home
-          navigate("/");
-        }
+        //redirect to home
+        navigate("/");
       }
     } catch (error) {
       setError(error.message);

@@ -2,7 +2,7 @@ import React from "react";
 //we will condition render logout button here
 import { Container, Logo, LogoutBtn } from "../index";
 import { Link } from "react-router-dom";
-import { UseSelector, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 // difference in navigate and useNav is useNav forcefully
 import { useNavigate } from "react-router-dom";
 

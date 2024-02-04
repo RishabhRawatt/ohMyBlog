@@ -8,6 +8,7 @@ import LogoutBtn from "./Header/LogoutBtn";
 import RTE from "./RTE";
 import Signup from "./Signup";
 import Login from "./Login";
+import Button from "./Button";
 import Select from "./Select";
 import PostForm from "./post-form/PostForm";
 import PostCard from "./PostCard.jsx";
@@ -28,4 +29,5 @@ export {
   AuthLayout,
   Input,
   Select,
+  Button,
 };
