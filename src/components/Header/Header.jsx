@@ -42,7 +42,10 @@ function Header() {
   ];
 
   return (
-    <header className="py-3 shadow bg-gray-500">
+    <header
+      className="py-3 shadow-sm shadow-indigo-900 rounded-md"
+      style={{ backgroundColor: "#000336" }}
+    >
       <Container>
         <nav className="flex">
           <div className="mr-4">
@@ -54,11 +57,11 @@ function Header() {
           <ul className="flex ml-auto">
             {navItems.map((item) =>
               item.active ? (
-                //jo cheez repeat hoti h udhar latae h key (::NOTE)
+                //jo cheez repeat hoti h udhar add karte h key (::NOTE)
                 <li key={item.name}>
                   <button
                     onClick={() => navigate(item.slug)}
-                    className="inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full"
+                    className="inline-bock px-6 py-2 duration-200 hover:bg-indigo-950 rounded-full text-cyan-100"
                   >
                     {item.name}
                   </button>

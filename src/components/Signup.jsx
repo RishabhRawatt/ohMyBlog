@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import authService from "../appwrite/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../store/authSlice";
@@ -28,8 +28,12 @@ function Signup() {
 
   return (
     <div className="flex items-center justify-center">
+      {/* right div  */}
+      <div>
+        <img src="/paaji.png" alt="Your Alt Text" />
+      </div>
       <div
-        className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}
+        className={`mx-auto w-full max-w-lg  bg-indigo-950 rounded-xl p-10 border border-black/10`}
       >
         <div className="mb-2 flex justify-center">
           <span className="inline-block w-full max-w-[100px]">
@@ -39,11 +43,11 @@ function Signup() {
         <h2 className="text-center text-2xl font-bold leading-tight">
           Sign up to create account
         </h2>
-        <p className="mt-2 text-center text-base text-black/60">
+        <p className="mb-7 mt-2 text-center text-base text-white/60">
           Already have an account?&nbsp;
           <Link
             to="/login"
-            className="font-medium text-primary transition-all duration-200 hover:underline"
+            className="font-medium text-blue-500 text-primary transition-all duration-200 hover:text-white hover:underline"
           >
             Sign In
           </Link>
@@ -60,7 +64,7 @@ function Signup() {
               })}
             />
             <Input
-              label="Email: "
+              label="Email:"
               placeholder="Enter your email"
               type="email"
               {...register("email", {
