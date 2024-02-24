@@ -40,6 +40,7 @@ export class AuthService {
       } else return userAccount;
     } catch (error) {
       console.log("createAcount :: error", error);
+      throw error;
     }
   }
 
@@ -50,6 +51,7 @@ export class AuthService {
       return await this.account.createEmailSession(email, password);
     } catch (error) {
       console.log("login :: error", error);
+      throw error;
     }
   }
 
