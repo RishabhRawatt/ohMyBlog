@@ -41,6 +41,11 @@ To run the Blog Website on your local machine, follow the steps below:
 - Make sure to configure your Appwrite
   and keep your `.env` file in the root directory of this project.
 
+### Deployment
+
+The Brewery Review System is deployed and accessible at https://ohmyblog.netlify.app/ <br/>
+Feel free to explore and interact with the live application.
+
 ### Technologies Used
 
 - **Frontend**: React.js, Tailwind CSS, Redux
